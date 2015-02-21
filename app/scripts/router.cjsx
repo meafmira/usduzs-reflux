@@ -6,10 +6,12 @@ DefaultRoute = Router.DefaultRoute
 
 Layout = require './components/layout'
 Home = require './components/home'
+Charts = require './components/charts/charts'
 
 routes = (
 	<Route name="layout" path="/" handler={Layout}>
 		<DefaultRoute handler={Home} />
+		<Route name="charts" path="charts" handler={Charts} />
 	</Route>
 )
 

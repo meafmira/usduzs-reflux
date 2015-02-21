@@ -1,6 +1,6 @@
 window.$ = require "jquery"
-
-console.log $
+window.React = require "react"
+window.Reflux = require "reflux"
 
 Router = require './router'
 
