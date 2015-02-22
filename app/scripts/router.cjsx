@@ -17,4 +17,4 @@ routes = (
 
 exports.start = ->
 	Router.run routes, (Handler) ->
-		React.render <Handler />, document.getElementById('content')
+		React.render <Handler />,  document.getElementById('content')

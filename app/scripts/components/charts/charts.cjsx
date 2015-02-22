@@ -1,6 +1,6 @@
 ChartsStore = require "../../stores/charts"
 ChartsActions = require "../../actions/charts"
-LineChart = require('react-chartjs').Line
+LineChart = require '../line-chart'
 
 Charts = React.createClass
   mixins: [Reflux.ListenerMixin]
@@ -32,12 +32,12 @@ Charts = React.createClass
               За неделю
             </div>
             <div className="panel-body text-center">
-              <LineChart
-                className="line-chart"
-                data={@state.charts.weekLineData}
-                width={800}
-                height={300}
-              />
+              <div>
+                <LineChart
+                  className="line-chart"
+                  data={@state.charts.weekLineData}
+                />
+              </div>
             </div>
           </div>
           <div className="panel panel-default">
@@ -45,12 +45,13 @@ Charts = React.createClass
               За месяц
             </div>
             <div className="panel-body text-center">
-              <LineChart
-                className="line-chart"
-                data={@state.charts.monthLineData}
-                width={800}
-                height={300}
-              />
+              <div>
+                <LineChart
+                  className="line-chart"
+                  data={@state.charts.monthLineData}
+                  height={300}
+                />
+              </div>
             </div>
           </div>
         </div>
